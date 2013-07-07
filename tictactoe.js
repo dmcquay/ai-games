@@ -100,7 +100,10 @@ TicTacToeHistory.prototype = {
     },
 
     import: function(data) {
-        this.layouts = JSON.parse(data);
+        if (typeof data == 'string') {
+            data = JSON.parse(data);
+        }
+        this.layouts = data;
     }
 };
 
@@ -340,7 +343,7 @@ var data = {"O        ":30,"O X      ":72,"OOX      ":-2,"OOX X    ":-7,"OOXOX  
 
 $(function() {
     var game = new TicTacToe();
-    game.import(data);
+    game.history.import(data);
     var board = new TicTacToeUI(game, $('#board'));
     board.render();
     game.start();
