@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Tic Tac Toe</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+        <script type="text/javascript" src="http://underscorejs.org/underscore-min.js"></script>
+        <script type="text/javascript" src="tictactoe.js"></script>
+    </head>
+    <body>
+        <h1>Tic Tac Toe (AI)</h1>
+        <ul id="board"></ul>
+        <ul id="outcomes">
+            <li><span class="win" data-count="0">0</span> Wins</li>
+            <li><span class="lose" data-count="0">0</span> Losses</li>
+            <li><span class="draw" data-count="0">0</span> Draws</li>
+            <li class="message"></li>
+        </ul>
+        <div>
+            <textarea id="layouts"></textarea>
+            <button id="export">Export</button>
+            <button id="import">Import</button>
+        </div>
+    </body>
+</html>
